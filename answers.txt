@@ -1,0 +1,15 @@
+1. The server.c file is intended to create a socket that listens to a
+particular port of the host. When a connection request is accepted, it attempts
+to write a certain file to the connecting client.
+
+The client.c file is intended to create a client socket that reaches out to the
+server socket and the hosted file is written to it.
+
+2. In server.c:
+line 20: 'if (argc != 2)' should be changed to 'if (argc != 3)' to ensure
+there are 2 extra arguments
+
+line 37: 'addr_sin' should be 'sin_addr'
+
+in client.c:
+line 28: typo - the variable is serveradr not serveraddr
